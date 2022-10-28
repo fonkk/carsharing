@@ -5,6 +5,7 @@ import { PATHS } from 'constants/PATHS'
 
 const Main = lazy(() => import('pages/MainPage').then((module) => ({ default: module.MainPage })))
 const Error = lazy(() => import('pages/ErrorPage').then((module) => ({ default: module.ErrorPage })))
+const Admin = lazy(() => import('pages/AdminAccountPage').then((module) => ({ default: module.AdminAccountPage })))
 
 export const Routing = () => {
     return (
@@ -22,6 +23,14 @@ export const Routing = () => {
                 element={
                     <Suspense fallback={<LoadingPage />}>
                         <Error />
+                    </Suspense>
+                }
+            />
+            <Route
+                path={PATHS.admin}
+                element={
+                    <Suspense fallback={<LoadingPage />}>
+                        <Admin />
                     </Suspense>
                 }
             />
