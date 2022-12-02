@@ -6,6 +6,10 @@ import { PATHS } from 'constants/PATHS'
 const Main = lazy(() => import('pages/MainPage').then((module) => ({ default: module.MainPage })))
 const Error = lazy(() => import('pages/ErrorPage').then((module) => ({ default: module.ErrorPage })))
 const Admin = lazy(() => import('pages/AdminAccountPage').then((module) => ({ default: module.AdminAccountPage })))
+const Personal = lazy(() =>
+    import('pages/PersonalAccountPage').then((module) => ({ default: module.PersonalAccountPage }))
+)
+const Cars = lazy(() => import('pages/CarsPage').then((module) => ({ default: module.CarsPage })))
 
 export const Routing = () => {
     return (
@@ -31,6 +35,22 @@ export const Routing = () => {
                 element={
                     <Suspense fallback={<LoadingPage />}>
                         <Admin />
+                    </Suspense>
+                }
+            />
+            <Route
+                path={PATHS.personal}
+                element={
+                    <Suspense fallback={<LoadingPage />}>
+                        <Personal />
+                    </Suspense>
+                }
+            />
+            <Route
+                path={PATHS.cars}
+                element={
+                    <Suspense fallback={<LoadingPage />}>
+                        <Cars />
                     </Suspense>
                 }
             />

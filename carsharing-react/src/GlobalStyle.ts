@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
+  html, body, #root {
+    width: 100%;
+    height: 100%;
+  }
   body {
     margin: 0;
     padding: 0;

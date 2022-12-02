@@ -1,4 +1,4 @@
-import * as ST from 'components/AdminAccount/styled'
+import * as ST from './styled'
 export const Setting3 = () => {
     return <>Контент третьей настройки</>
 }

@@ -1,5 +1,8 @@
 export enum PATHS {
     main = '/',
     error = '*',
-    admin = 'admin',
+    admin = '/admin',
+    personal = '/personal',
+    cars = '/cars',
+    qa = '/qa',
 }
