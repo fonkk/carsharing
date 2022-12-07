@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
     align-items: center;
     flex-direction: column;
 `
+
 export const Filters = styled.div`
     width: 90%;
     height: 8%;
@@ -37,19 +38,23 @@ export const Table = styled.table`
     table-layout: fixed;
     border: none;
 `
+
 export const TableHead = styled.thead``
 
 export const ScrollableTableBody = styled.div`
     overflow-x: auto;
-    height: 700px;
+    height: 600px;
 `
 
 export const TableBody = styled.tbody`
     height: 500px;
     overflow: scroll;
 `
+
 export const ColumnHeader = styled.th``
+
 export const TableRow = styled.tr``
+
 export const TableCell = styled.td`
     text-align: center;
     padding: 10px 0;
