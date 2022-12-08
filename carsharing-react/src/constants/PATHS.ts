@@ -5,4 +5,5 @@ export enum PATHS {
     personal = '/personal',
     cars = '/cars',
     qa = '/qa',
+    car = '/car',
 }

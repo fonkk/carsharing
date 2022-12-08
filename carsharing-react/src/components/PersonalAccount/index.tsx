@@ -1,13 +1,11 @@
 import * as ST from 'components/AdminAccount/styled'
 import { useState } from 'react'
-import { Setting1 } from 'components/PersonalAccount/UserTabs/Setting1'
-import { Setting2 } from 'components/PersonalAccount/UserTabs/Setting2'
-import { Setting3 } from 'components/PersonalAccount/UserTabs/Setting3'
+import { MainInfo } from 'components/PersonalAccount/UserTabs/MainInfo'
+import { MyCar } from 'components/PersonalAccount/UserTabs/MyCar'
 
 const enum Tabs {
     tab1 = 1,
     tab2 = 2,
-    tab3 = 3,
 }
 
 export const PersonalAccount = () => {
@@ -15,13 +13,10 @@ export const PersonalAccount = () => {
     const getTab = () => {
         switch (tab) {
             case Tabs.tab1:
-                return <Setting1 />
+                return <MainInfo />
                 break
             case Tabs.tab2:
-                return <Setting2 />
-                break
-            case Tabs.tab3:
-                return <Setting3 />
+                return <MyCar />
                 break
         }
     }
@@ -29,9 +24,8 @@ export const PersonalAccount = () => {
     return (
         <ST.Wrapper>
             <ST.Menu>
-                <ST.MenuItem onClick={() => setTab(Tabs.tab1)}>Настройка 1</ST.MenuItem>
-                <ST.MenuItem onClick={() => setTab(Tabs.tab2)}>Настройка 2</ST.MenuItem>
-                <ST.MenuItem onClick={() => setTab(Tabs.tab3)}>Настройка 3</ST.MenuItem>
+                <ST.MenuItem onClick={() => setTab(Tabs.tab1)}>Личные данные</ST.MenuItem>
+                <ST.MenuItem onClick={() => setTab(Tabs.tab2)}>Моя машина</ST.MenuItem>
             </ST.Menu>
             <ST.ContentWrapper>
                 <ST.Content>{getTab()}</ST.Content>

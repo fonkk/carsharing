@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: 'Source Sans Pro', sans-serif;
   }
   html, body, #root {
     width: 100%;
@@ -17,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     position: relative;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: 'Source Sans Pro', sans-serif;
+    ]
   }
   ol, ul {
     list-style: none;

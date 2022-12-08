@@ -1,9 +1,5 @@
 import * as ST from './styled'
 
-export const CarCard = () => {
-    return (
-        <ST.Wrapper>
-            <ST.Photo />
-        </ST.Wrapper>
-    )
+export const CarProfile = () => {
+    return <>Профиль машины</>
 }

@@ -18,7 +18,7 @@ export const Menu = styled.div`
     padding: 50px 20px;
     box-sizing: border-box;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    z-index: 999;
+    z-index: 9;
 `
 
 export const MenuItem = styled.div`

@@ -10,6 +10,7 @@ const Personal = lazy(() =>
     import('pages/PersonalAccountPage').then((module) => ({ default: module.PersonalAccountPage }))
 )
 const Cars = lazy(() => import('pages/CarsPage').then((module) => ({ default: module.CarsPage })))
+const Car = lazy(() => import('pages/CarPage').then((module) => ({ default: module.CarPage })))
 
 export const Routing = () => {
     return (
@@ -51,6 +52,14 @@ export const Routing = () => {
                 element={
                     <Suspense fallback={<LoadingPage />}>
                         <Cars />
+                    </Suspense>
+                }
+            />
+            <Route
+                path={PATHS.car + `/:carId`}
+                element={
+                    <Suspense fallback={<LoadingPage />}>
+                        <Car />
                     </Suspense>
                 }
             />
